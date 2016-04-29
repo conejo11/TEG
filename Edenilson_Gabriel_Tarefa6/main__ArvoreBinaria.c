@@ -1,5 +1,5 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "bibFunçõesArvBin.h"
 
 int main(){
@@ -22,18 +22,13 @@ int main(){
         insere(&raiz, i);
     }
 
-    /* Imprime os nós da árvore */
-    printf("Pre Ordem:\n");
-    print_preOrdem(raiz);
-
-    printf("Em ordem\n");
-    print_emOrdem(raiz);
-
-    printf("Pos Ordem\n");
-    print_posOrdem(raiz);
-
+    
     /* Deleta todos os nós da árvore */
     delArv(raiz);
 
     return 0;
+}
+
+void dfs(int i){
+
 }

@@ -1,5 +1,5 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "bibFunçõesArvBin.h"
 
 void insere(noh ** arv, int val){
@@ -19,30 +19,6 @@ void insere(noh ** arv, int val){
         insere(&(*arv)->dir, val);
     }
 }
-
-void print_preOrdem(noh * arv){
-    if (arv){
-        printf("%d\n",arv->dados);
-        print_preOrdem(arv->esq);
-        print_preOrdem(arv->dir);
-    }
-}
-
-void print_emOrdem(noh * arv){
-    if (arv){
-        print_emOrdem(arv->esq);
-        printf("%d\n",arv->dados);
-        print_emOrdem(arv->dir);
-    }
-}
-void print_posOrdem(noh * arv){
-    if (arv){
-        print_posOrdem(arv->esq);
-        print_posOrdem(arv->dir);
-        printf("%d\n",arv->dados);
-    }
-}
-
 void delArv(noh * arv){
     if (arv){
         delArv(arv->esq);
